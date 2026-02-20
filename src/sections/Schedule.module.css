@@ -1,0 +1,41 @@
+.tabs {
+  display: flex; gap: 0; margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.tab {
+  font-family: 'DM Mono', monospace; font-size: 0.88rem;
+  color: #475569; background: none; border: none; cursor: pointer;
+  padding: 0.9rem 1.6rem; position: relative; transition: color 0.2s;
+  letter-spacing: 0.08em;
+}
+.active { color: #40FFFF; }
+.tabUnderline {
+  position: absolute; bottom: -1px; left: 0; right: 0; height: 2px;
+  background: #40FFFF; box-shadow: 0 0 8px rgba(0,245,255,0.6);
+}
+.item {
+  display: grid; grid-template-columns: 155px 1fr;
+  gap: 1.5rem; padding: 1.1rem 1.4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px; margin-bottom: 2px;
+  transition: background 0.2s;
+}
+.item:hover { background: rgba(255,255,255,0.03); }
+.highlight {
+  background: rgba(0,245,255,0.06) !important;
+  border: 1px solid rgba(0,245,255,0.2);
+  border-radius: 10px;
+}
+.time {
+  font-family: 'DM Mono', monospace; font-size: 0.78rem;
+  color: #40FFFF; letter-spacing: 0.07em; font-weight: 600;
+  padding-top: 0.15rem; flex-shrink: 0;
+}
+.highlight .time { color: #fff; }
+.body strong { display: block; font-family: 'Syne', sans-serif; font-size: 0.97rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
+.body p { font-size: 0.85rem; color: #64748B; line-height: 1.6; }
+.highlight .body strong { color: #40FFFF; font-family: 'Orbitron', monospace; letter-spacing: 0.06em; }
+@media (max-width: 600px) {
+  .item { grid-template-columns: 1fr; gap: 0.4rem; }
+  .time { font-size: 0.7rem; }
+}

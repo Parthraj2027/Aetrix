@@ -1,0 +1,63 @@
+.loader {
+  position: fixed; inset: 0; z-index: 10000;
+  background: #020209;
+  display: flex; align-items: center; justify-content: center;
+}
+.canvas { position: absolute; inset: 0; z-index: 0; }
+.content {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 0;
+  text-align: center;
+}
+.logo {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  font-weight: 900; letter-spacing: 0.1em; line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.bracket { color: rgba(0,245,255,0.35); }
+.name {
+  color: #fff;
+  animation: namePulse 2s ease-in-out infinite;
+  text-shadow: 0 0 40px rgba(0,245,255,0.5), 0 0 80px rgba(0,245,255,0.2);
+}
+@keyframes namePulse {
+  0%,100% { text-shadow: 0 0 40px rgba(0,245,255,0.5), 0 0 80px rgba(0,245,255,0.2); }
+  50%      { text-shadow: 0 0 70px rgba(0,245,255,0.9), 0 0 130px rgba(0,245,255,0.4); }
+}
+.year {
+  font-family: 'DM Mono', monospace;
+  font-size: 1rem; color: #40FFFF;
+  letter-spacing: 0.55em; margin-bottom: 2.5rem; opacity: 0.7;
+}
+.barWrap {
+  width: clamp(220px, 38vw, 400px); height: 2px;
+  background: rgba(255,255,255,0.06); border-radius: 2px;
+  margin-bottom: 1rem; position: relative; transform-origin: left;
+}
+.bar {
+  height: 100%; border-radius: 2px; position: absolute; top: 0; left: 0;
+  background: linear-gradient(90deg, #40FFFF, #D8B4FE);
+  transition: width 0.12s linear; z-index: 2;
+}
+.barGlow {
+  height: 10px; top: -4px; left: 0; position: absolute; border-radius: 5px;
+  background: linear-gradient(90deg, rgba(0,245,255,0.6), rgba(192,132,252,0.4));
+  filter: blur(6px); transition: width 0.12s linear;
+}
+.pct {
+  font-family: 'Orbitron', monospace; font-size: 0.82rem; font-weight: 700;
+  color: #40FFFF; letter-spacing: 0.2em; margin-bottom: 0.75rem;
+}
+.tagline {
+  font-family: 'DM Mono', monospace; font-size: 0.72rem;
+  color: rgba(148,163,184,0.8); letter-spacing: 0.12em; height: 1rem;
+}
+.corner {
+  position: absolute; width: 22px; height: 22px;
+  border-color: #40FFFF; border-style: solid; opacity: 0.45;
+}
+.tl { top: 2rem; left: 2rem; border-width: 2px 0 0 2px; }
+.tr { top: 2rem; right: 2rem; border-width: 2px 2px 0 0; }
+.bl { bottom: 2rem; left: 2rem; border-width: 0 0 2px 2px; }
+.br { bottom: 2rem; right: 2rem; border-width: 0 2px 2px 0; }

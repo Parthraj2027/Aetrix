@@ -1,0 +1,62 @@
+.marqueeWrap {
+  overflow: hidden; border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin: 2rem 0 3rem; background: rgba(255,255,255,0.02);
+}
+.marqueeTrack {
+  display: flex; align-items: center; width: max-content;
+  animation: marquee 25s linear infinite;
+  padding: 0;
+}
+.marqueeTrack:hover { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-33.333%); } }
+.marqueeItem {
+  font-family: 'Orbitron', monospace; font-size: clamp(0.9rem, 2vw, 1.3rem);
+  font-weight: 800; letter-spacing: 0.12em; padding: 1rem 1.8rem;
+  opacity: 0.75; cursor: default; white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.marqueeItem:hover { opacity: 1; }
+.marqueeSep { color: rgba(0,245,255,0.3); font-size: 0.5rem; padding: 0 0.5rem; }
+
+.rows { display: flex; flex-direction: column; }
+.row {
+  display: grid; grid-template-columns: 1fr 140px;
+  gap: 2.5rem; align-items: center;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.3s, border-color 0.3s; cursor: default;
+}
+.row:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.rowLeft { display: flex; align-items: flex-start; gap: 2rem; }
+.num {
+  font-family: 'Orbitron', monospace; font-size: 3.8rem; font-weight: 900;
+  color: var(--dc); opacity: 0.22; line-height: 1; flex-shrink: 0; min-width: 75px;
+  transition: opacity 0.3s;
+}
+.row:hover .num { opacity: 0.5; }
+.divLine { width: 1px; background: rgba(255,255,255,0.08); align-self: stretch; flex-shrink: 0; }
+.info { flex: 1; }
+.tag {
+  font-family: 'DM Mono', monospace; font-size: 0.72rem;
+  color: var(--dc); letter-spacing: 0.15em; margin-bottom: 0.55rem; font-weight: 600;
+}
+.title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.1rem, 2.2vw, 1.55rem); font-weight: 800;
+  color: #fff; margin-bottom: 0.65rem; line-height: 1.2;
+}
+.desc { font-size: 0.92rem; color: #94A3B8; line-height: 1.78; margin-bottom: 1rem; max-width: 520px; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tagChip {
+  font-family: 'DM Mono', monospace; font-size: 0.67rem; letter-spacing: 0.06em;
+  padding: 0.25rem 0.7rem; color: var(--dc);
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px;
+}
+.visual { width: 120px; height: 120px; flex-shrink: 0; }
+.visual svg { width: 100%; height: 100%; }
+@media (max-width: 900px) {
+  .row { grid-template-columns: 1fr; }
+  .visual { display: none; }
+  .num { font-size: 2.5rem; min-width: 55px; }
+}

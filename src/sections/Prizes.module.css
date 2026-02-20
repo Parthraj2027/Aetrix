@@ -1,0 +1,51 @@
+.totalBanner {
+  display: flex; align-items: center; justify-content: center; gap: 1.2rem;
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(0,245,255,0.25);
+  border-radius: 14px; padding: 1.4rem 2rem; margin-bottom: 3rem; flex-wrap: wrap;
+  box-shadow: 0 0 50px rgba(0,245,255,0.06);
+}
+.totalLabel { font-family: 'DM Mono', monospace; font-size: 0.82rem; color: #94A3B8; letter-spacing: 0.12em; }
+.totalAmount {
+  font-family: 'Orbitron', monospace; font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900; color: #FCD34D; text-shadow: 0 0 30px rgba(252,211,77,0.6);
+}
+.totalSub { font-family: 'DM Mono', monospace; font-size: 0.82rem; color: #475569; letter-spacing: 0.1em; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px; padding: 1.8rem; position: relative; overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s; cursor: default;
+}
+.card:hover { border-color: var(--pc); box-shadow: 0 20px 60px var(--pc-glow); }
+.cardHeader {
+  display: flex; align-items: center; gap: 0.9rem;
+  padding-bottom: 1.3rem; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 1.2rem;
+}
+.iconRing { width: 50px; height: 50px; border-radius: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.domainNum { font-family: 'DM Mono', monospace; font-size: 0.67rem; color: #475569; letter-spacing: 0.1em; margin-bottom: 0.2rem; }
+.domainName { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; }
+.tiers { display: flex; flex-direction: column; gap: 0.7rem; }
+.tier {
+  border-radius: 10px; padding: 0.9rem 1rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.03);
+}
+.gold   { border-color: rgba(252,211,77,0.25); background: rgba(252,211,77,0.04); }
+.silver { border-color: rgba(203,213,225,0.12); }
+.bronze { border-color: rgba(245,158,106,0.12); }
+.tierLabel { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: #475569; letter-spacing: 0.1em; margin-bottom: 0.35rem; }
+.tierAmount {
+  font-family: 'Orbitron', monospace; font-size: 1.35rem; font-weight: 900; margin-bottom: 0.55rem;
+}
+.gold   .tierAmount { color: #FCD34D; text-shadow: 0 0 15px rgba(252,211,77,0.5); }
+.silver .tierAmount { color: #CBD5E1; }
+.bronze .tierAmount { color: #F59E6A; }
+.meterTrack { height: 2px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
+.meterBar { height: 100%; width: 0; background: linear-gradient(90deg, var(--pc), transparent); border-radius: 2px; }
+.glow {
+  position: absolute; bottom: -60px; right: -60px; width: 180px; height: 180px;
+  border-radius: 50%; background: radial-gradient(circle, var(--pc-glow), transparent 70%);
+  pointer-events: none; filter: blur(30px); opacity: 0; transition: opacity 0.4s;
+}
+.card:hover .glow { opacity: 1; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
