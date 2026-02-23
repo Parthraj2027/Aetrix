@@ -17,7 +17,7 @@ import Footer from './sections/Footer'
 // ─── Unstop Registration Link ───────────────────────────────────────────────
 // When you get your Unstop link, change this ONE line.
 // Every Register button across the site updates automatically.
-export const UNSTOP_URL = 'COMING_SOON'
+export const UNSTOP_URL = 'https://unstop.com/hackathons/aetrix-2026-where-ai-meets-impact-science-and-technical-committee-pdeu-1645591'
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function App() {
