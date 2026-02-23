@@ -12,7 +12,7 @@ const contacts = [
   },
   {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>,
-    label: 'LinkedIn', value: 'Science & Technical Committee', sub: 'PDEU Official', href: 'https://linkedin.com',
+    label: 'LinkedIn', value: 'Science & Technical Committee', sub: 'PDEU Official', href:'https://www.linkedin.com/company/science-technical-committee-of-pdeu/posts/?feedView=all',
   },
   {
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>,
