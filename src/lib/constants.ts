@@ -3,8 +3,6 @@
 export const CAL_EVENTS: Record<string, { short: string; title: string; desc: string; hackathon: boolean }> = {
   '2026-02-20': { short: 'Reg. Open',     title: 'Registrations Open',       hackathon: false, desc: 'Portal goes live. Problem statements & rulebook released. Spread the word across colleges.' },
   '2026-03-15': { short: 'Reg. Close',    title: 'Registrations Close',      hackathon: false, desc: 'Last day to register. Portal closes after 250 registrations or on this date.' },
-  '2026-03-16': { short: 'Aptitude Test', title: 'Aptitude Elimination Test',hackathon: false, desc: 'Online aptitude, logical reasoning & tech-awareness test. ~150 shortlisted from 250+.' },
-  '2026-03-18': { short: 'Results',       title: 'Results Announced',        hackathon: false, desc: 'Shortlisted participant list released. Final team formation & mentor orientation session.' },
   '2026-03-21': { short: 'AETRIX Day 1',  title: 'AETRIX Begins — Day 1',   hackathon: true,  desc: 'Inauguration, expert talk, problem selection. Hacking officially begins at 14:45.' },
   '2026-03-22': { short: 'AETRIX Day 2',  title: 'AETRIX — Day 2 & Awards', hackathon: true,  desc: 'Code freeze 14:30. Evaluation rounds, final presentations, valedictory & award ceremony 18:00.' },
 }
@@ -12,9 +10,7 @@ export const CAL_EVENTS: Record<string, { short: string; title: string; desc: st
 export const TIMELINE_ITEMS = [
   { num: '01', date: '20 February 2026', title: 'Registrations Open',       desc: 'Portal goes live. Problem statements & rulebook released. Spread the word.' },
   { num: '02', date: '15 March 2026',    title: 'Registrations Close',      desc: 'Last day to register. Portal closes after 250 registrations or on this date.' },
-  { num: '03', date: '16 March 2026',    title: 'Aptitude Elimination Test', desc: 'Online aptitude, logical reasoning & tech-awareness test. ~150 shortlisted from 250+.' },
-  { num: '04', date: '18 March 2026',    title: 'Results Announced',        desc: 'Shortlisted participants announced. Final team formation & mentor orientation.' },
-  { num: '05', date: '21 – 22 March 2026', title: 'AETRIX Hackathon',      desc: '36 hours of non-stop building, mentoring, evaluating and winning. PDEU, Gandhinagar.' },
+  { num: '03', date: '21 – 22 March 2026', title: 'AETRIX Hackathon',      desc: '36 hours of non-stop building, mentoring, evaluating and winning. PDEU, Gandhinagar.' },
 ]
 
 export const DOMAINS = [
@@ -90,7 +86,7 @@ export const FAQS = [
   { q: 'What is the team size?',                        a: 'Final teams consist of 4–5 members. You can register solo, as a duo, or as a larger team. Formation is finalized after the elimination round.' },
   { q: 'Is there a registration fee?',                  a: 'Registration details including any fees will be communicated when the portal opens on 20th February 2026. Stay tuned on our official channels.' },
   { q: 'What is the pre-hackathon screening process?',  a: 'An online aptitude, logical reasoning, and tech-awareness test on 16th March. ~150 participants shortlisted from 250+ registrations.' },
-  { q: 'Is there a female participation requirement?',  a: 'Yes. Each team must include at least one female participant to encourage inclusive and balanced representation.' },
+  { q: 'Is there a female participation requirement?',  a: 'No, female participation is not compulsory. However, teams that include at least one female participant will receive bonus points — we strongly encourage diverse and inclusive teams.' },
   { q: 'Will food and accommodation be provided?',      a: 'Yes. All meals (breakfast, lunch, dinner, tea breaks) throughout the 36-hour hackathon. Accommodation details communicated to shortlisted participants.' },
   { q: 'Can we bring our own hardware/tools?',          a: 'Yes, participants are encouraged to bring their own laptops and hardware. Hardware kits may be available through sponsor partnerships.' },
 ]
