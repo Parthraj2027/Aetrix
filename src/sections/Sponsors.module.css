@@ -1,0 +1,203 @@
+.section {
+  padding: 7rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.legendLabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: #64748B;
+  letter-spacing: 0.1em;
+}
+
+/* ── Strip wrapper ── */
+.stripWrap {
+  position: relative;
+  width: 100%;
+  margin: 0 0 3.5rem;
+  overflow: hidden;
+}
+
+.glowLine {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 245, 255, 0.25) 20%,
+    rgba(192, 132, 252, 0.25) 50%,
+    rgba(252, 211, 77, 0.25) 80%,
+    transparent 100%
+  );
+}
+
+/* Scrolling track */
+.strip {
+  background: rgba(255, 255, 255, 0.025);
+  padding: 1.6rem 0;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 0;
+  animation: scroll 32s linear infinite;
+}
+.track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+
+/* ── Individual sponsor card ── */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.5rem 3rem;
+  position: relative;
+  cursor: default;
+  transition: transform 0.2s;
+  min-width: 200px;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.badge {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  padding: 0.18rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.logoBox {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(20%) brightness(0.95);
+  transition: filter 0.3s, transform 0.3s;
+}
+.card:hover .logo {
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.06);
+}
+
+.name {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #94A3B8;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+.card:hover .name { color: #F1F5F9; }
+
+/* Separator dot between cards */
+.sep {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  opacity: 0.35;
+}
+
+/* Fade masks on edges */
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 140px;
+  pointer-events: none;
+  z-index: 2;
+}
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, var(--bg, #020209), transparent);
+}
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, var(--bg, #020209), transparent);
+}
+
+/* Bottom CTA */
+.cta {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.cta p {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  color: #64748B;
+}
+.ctaLink {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.88rem;
+  color: #40FFFF;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: text-shadow 0.2s;
+}
+.ctaLink:hover {
+  text-shadow: 0 0 15px rgba(0,245,255,0.7);
+}
+
+@media (max-width: 600px) {
+  .legend { gap: 1rem; }
+  .card { min-width: 160px; padding: 0.5rem 2rem; }
+  .logoBox { width: 90px; height: 46px; }
+  .fadeLeft, .fadeRight { width: 60px; }
+}

@@ -13,7 +13,7 @@ import Register from './sections/Register'
 import FAQ from './sections/FAQ'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
-
+import Sponsors from './sections/Sponsors'
 // ─── Unstop Registration Link ───────────────────────────────────────────────
 // When you get your Unstop link, change this ONE line.
 // Every Register button across the site updates automatically.
@@ -46,6 +46,7 @@ export default function App() {
             <Schedule />
             <Evaluation />
             <Register />
+            <Sponsors />
             <FAQ />
             <Contact />
           </main>
